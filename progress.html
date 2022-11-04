@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="progress.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="myProgress">
+    <div id="myBar">0%</div>
+    <button id="move" onclick="move()">Start Filling In</button>
+  </div>
+  <script>
+    var i = 0;
+      function move() {
+        if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("myBar");
+          var width = 0;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+              i = 0;
+              document.getElementById("move").onclick = (() => { location.href = 'receipt.html' })
+              document.getElementById("move").innerHTML = "Print Receipt"
+            } else {
+              width++;
+              elem.style.width = width-10 + "%";
+              elem.innerHTML = width + "%";
+            }
+          }
+        }
+
+      console.log(i)
+      }
+  </script>
+</body>
+</html>
