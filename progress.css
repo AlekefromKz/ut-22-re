@@ -1,16 +1,21 @@
 body{
-  padding-top: 100px;
+  padding-top: 200px;
+  text-align: center;
   vertical-align: middle;
   margin: auto;
 }
 
 #myBar {
-  width: 10%;
+  width: 1%;
   height: 100px;
   background-color: red;
+  margin-top: 200px;
+  padding-left: 80px;
+  padding-right: 80px;
+
   text-align: center;
   /* To center it horizontally (if you want) */
-  line-height: 30px;
+  line-height: 100px;
   /* To center it vertically */
   color: white;
 }
